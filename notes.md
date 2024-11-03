@@ -25,3 +25,20 @@
     >> PosterSlider        PosterSlider.Component.jsx
 
 npx create-react-app .
+
+[Tailwind](https://tailwindcss.com/docs/installation)
+
+[For carousels (React Slick)](https://react-slick.neostack.com/)
+
+<!--& Axios is for connecting front-end and back-end (connect to APIs)  -->
+[Axios (install)](https://www.npmjs.com/package/axios)
+
+[Axios Documentation](https://axios-http.com/docs/intro)
+
+[Headless UI](https://headlessui.com/)
+npm install @headlessui/react
+
+<!--^ React icons: -->
+npm i react-icons
+
+npm i react-router-dom
