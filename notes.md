@@ -42,3 +42,6 @@ npm install @headlessui/react
 npm i react-icons
 
 npm i react-router-dom
+
+## rafce
+shortcut for the initial structure of the page
