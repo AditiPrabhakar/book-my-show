@@ -2,7 +2,7 @@ import './App.css';
 //^ Routers:
 import {Routes, Route} from "react-router-dom";
 
-//^ React Slick CSS:
+//^ React Slick CSS: (For carousels)
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
