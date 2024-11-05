@@ -36,6 +36,7 @@ npx create-react-app .
 [Axios Documentation](https://axios-http.com/docs/intro)
 
 [Headless UI](https://headlessui.com/)
+
 npm install @headlessui/react
 
 <!--^ React icons: -->
@@ -45,3 +46,5 @@ npm i react-router-dom
 
 ## rafce
 shortcut for the initial structure of the page
+
+[Tailwind Shades](https://www.tailwindshades.com/)
