@@ -24,6 +24,9 @@
     >> Poster              Poster.Component.jsx
     >> PosterSlider        PosterSlider.Component.jsx
 
+index.js -> app.js -> home page 
+layout -> navbar -> components (herocarousel) -> footer
+
 npx create-react-app .
 
 [Tailwind](https://tailwindcss.com/docs/installation)
