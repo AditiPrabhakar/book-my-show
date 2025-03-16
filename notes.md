@@ -51,3 +51,11 @@ npm i react-router-dom
 shortcut for the initial structure of the page
 
 [Tailwind Shades](https://www.tailwindshades.com/)
+
+
+for API integration: 
+used: [TMDB API](https://www.themoviedb.org/settings/api)
+profile -> settings -> api -> get the api key
+url used: https://api.themoviedb.org/3/movie/550?api_key=b4a7ff0b7f1a527f9940279c07620586
+
+for searching various types of links (top movies, favorite movies etc): [DevelopeTMDB Doc](https://developer.themoviedb.org/docs/getting-started)

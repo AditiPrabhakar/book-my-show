@@ -6,7 +6,7 @@ const DefaultLayoutHoc = (Component) => ({...props}) => {
     <div>
         <Navbar />
         <Component {...props} /> 
-        <div>Footer</div>
+        <div className="w-full bg-gray-800 overflow-x-hidden text-white text-center py-4">Footer</div>
     </div>
   )
 }

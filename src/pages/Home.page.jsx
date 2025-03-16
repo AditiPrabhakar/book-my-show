@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 //* Layout HOC
 import DefaultLayoutHoc from '../layouts/Default.layout';
@@ -12,18 +13,27 @@ const HomePage = () => {
     const [recommendedMovies, setRecommendedMovies] = useState([]); //& Array cause there will be more than one recommended movie
     const [premierMovies, setPremierMovies] = useState([]);
     const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
+
+    useEffect(() => {
+      const requestTopRatedMovies = async () => {
+        const getTopRatedMovies = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=b4a7ff0b7f1a527f9940279c07620586');
+        setRecommendedMovies(getTopRatedMovies.data.results)
+      }
+      requestTopRatedMovies();
+    }, [])
+
     return (
       <>
         <HeroCarousel />
 
-        <div className="container mx-auto px-4 md:px-12 my-8">
+        <div className="container mx-auto overflow-x-hidden px-4 md:px-8 my-8">
           <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3">
             The best of Entertainment
           </h1>
           <EntertainmentCard />
         </div>
 
-        <div className="container mx-auto px-4 md:px-12 my-8">
+        <div className="container mx-auto overflow-x-hidden px-4 md:px-8 my-8">
           <PosterSlider
             //* Props
             title="Recommended movies"
