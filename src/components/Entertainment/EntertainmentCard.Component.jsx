@@ -1,12 +1,19 @@
 import React from 'react'
 import Slider from 'react-slick'
+import { NextArrow, PrevArrow } from '../HeroCarousel/Arrows.Component';
 
 const EntertainmentCard = (props) => {
-  return <>
-    <div>
-      <img className='w-full h-full rounded-lg' src={props.src} alt='entertainment'/>
-    </div>
-  </>
+  return (
+    <>
+      <div className="w-full h-full px-2"> {/* Added padding between cards */}
+        <img
+          className="w-full h-full rounded-lg object-cover shadow-md" 
+          src={props.src} 
+          alt="entertainment"
+        />
+      </div>
+    </>
+  );
 }
 
 const EntertainmentCardSlider = () => {
@@ -32,6 +39,8 @@ const EntertainmentCardSlider = () => {
     slidesToShow: 5,
     slidesToScroll: 4,
     initialSlide: 0,
+    nextArrow: <NextArrow style={{ right: "10px" }} />,
+    prevArrow: <PrevArrow />,
     responsive: [ //no need to write for small, md, lg screen sizes separately now
       {
         breakpoint: 1024,

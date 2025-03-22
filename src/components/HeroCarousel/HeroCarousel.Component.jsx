@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import HeroSlider from 'react-slick'
-import { nextArrow, prevArrow } from './Arrows.Component';
+import React, { useState } from 'react';
+import HeroSlider from 'react-slick';
+import { NextArrow, PrevArrow } from './Arrows.Component';
 
 const HeroCarousel = () => {
-  //& Using an array as there are multiple images
-   const [images, setImages] = useState([
+  // Using an array as there are multiple images
+  const [images, setImages] = useState([
     {
       adult: false,
       backdrop_path: "/ugS5FVfCI3RV0ZwZtBV3HAV75OX.jpg",
@@ -41,65 +41,51 @@ const HeroCarousel = () => {
     },
   ]);
 
-  const settingLG = {  //For large screen sizes
+  const settings = {
     arrows: true,
     slidesToShow: 1,
     infinite: true,
     speed: 500,
     slideToScroll: 1,
-    nextArrow: <nextArrow />,
-    prevArrow: <prevArrow />,
-  }; 
-  const settings = { //For small screen sizes
-    arrows: true,
-    slidesToShow: 1,
-    infinite: true,
-    speed: 500,
-    slideToScroll: 1,
-    nextArrow: <nextArrow/>,
-    prevArrow: <prevArrow/>,
+    initialSlide: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
     <>
-    <div className='lg:hidden overflow-x-hidden'>
-      <HeroSlider {...settings}> 
-      {
-        images.map((image, index) => {
-          <div className='w-full h-56 md:h-80 py-3' key={index}>
-            <img 
-              src= {`https://image.tmdb.org/t/p/original${images.backdrop_path}`} 
-              alt="Hero Banner" 
-              className='w-full h-full rounded-md object-cover' 
-            />
+      {/* Small and Medium Screens */}
+      <div className="lg:hidden overflow-x-hidden">
+        <HeroSlider {...settings}>
+          {images.map((image, index) => (
+            <div className="w-full h-56 md:h-80 py-3" key={index}>
+              <img
+                src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
+                alt="Hero Banner"
+                className="w-full h-full rounded-md object-cover"
+              />
+            </div>
+          ))}
+        </HeroSlider>
+      </div>
 
-          </div>
-        })
-      }
-      </HeroSlider>
-
-    </div>
-    <div className='hidden lg:block  overflow-x-hidden'>
-      <HeroSlider {...settingLG}>
-      {
-        images.map((image, index) => {
-          <div className='w-full h-96 px-2 py-3' key={index}>
-            <img 
-              src= {`https://image.tmdb.org/t/p/original${images.backdrop_path}`} 
-              alt="Hero Banner" 
-              className='w-full h-full rounded-md object-cover' 
-            />
-
-          </div>
-        })
-      }
-      </HeroSlider>
-    </div>
+      {/* Large Screens */}
+      <div className="hidden lg:block overflow-x-hidden">
+        <HeroSlider {...settings}>
+          {images.map((image, index) => (
+            <div className="w-full h-96 px-2 py-3" key={index}>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/10 rounded-md"></div>
+              <img
+                src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
+                alt="Hero Banner"
+                className="w-full h-full rounded-md object-cover"
+              />
+            </div>
+          ))}
+        </HeroSlider>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default HeroCarousel
-
-// lg:hidden => only visible on small and medium screen sizes
-// hidden lg:block => for large screen sizes
+export default HeroCarousel;

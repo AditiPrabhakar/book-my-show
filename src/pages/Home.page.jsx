@@ -16,10 +16,26 @@ const HomePage = () => {
 
     useEffect(() => {
       const requestTopRatedMovies = async () => {
-        const getTopRatedMovies = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=b4a7ff0b7f1a527f9940279c07620586');
+        const getTopRatedMovies = await axios.get('/movie/top_rated');
         setRecommendedMovies(getTopRatedMovies.data.results)
       }
       requestTopRatedMovies();
+    }, [])
+
+    useEffect(() => {
+      const requestPopularMovies = async () => {
+        const getPopularMovies = await axios.get('/movie/popular');
+        setPremierMovies(getPopularMovies.data.results)
+      }
+      requestPopularMovies();
+    }, [])
+
+    useEffect(() => {
+      const requestUpcomingMovies = async () => {
+        const getUpcomingMovies = await axios.get('/movie/upcoming');
+        setOnlineStreamEvents(getUpcomingMovies.data.results)
+      }
+      requestUpcomingMovies();
     }, [])
 
     return (
@@ -65,7 +81,7 @@ const HomePage = () => {
             title="Online Streaming Events"
             subtitle="Online Streaming Events"
             posters={onlineStreamEvents}
-            isDark={true}
+            isDark={false}
           />
         </div>
       </>
