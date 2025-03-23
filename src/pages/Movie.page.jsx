@@ -16,7 +16,6 @@ const MoviePage = () => {
   const { movie, setMovie } = useContext(MovieContext);
 
   const [cast, setCast] = useState([]);
-  const [ castName, setCastName ] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
   const [recommendedMovies, setRecommendedMovies] = useState([]);
 
@@ -58,7 +57,7 @@ const MoviePage = () => {
   const settingsCast = {
     infinite: false,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
     nextArrow: <NextArrow />,
@@ -67,14 +66,14 @@ const MoviePage = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 5,
+          slidesToScroll: 5,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
           slidesToScroll: 2,
           initailSlide: 1,
         },

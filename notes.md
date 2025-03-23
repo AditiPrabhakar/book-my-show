@@ -38,7 +38,7 @@ npx create-react-app .
 
 [Axios Documentation](https://axios-http.com/docs/intro)
 
-[Headless UI](https://headlessui.com/)
+[Headless UI](https://headlessui.com/) -> can be used in react and vue js not in angular (for pop ups)
 
 npm install @headlessui/react
 
@@ -62,3 +62,5 @@ for searching various types of links (top movies, favorite movies etc): [Develop
 
  ## Context API
  We can store/edit/update data from any component & then can access it in any of the component
+
+ [RazorPay](https://razorpay.com/)

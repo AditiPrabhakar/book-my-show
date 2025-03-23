@@ -1,27 +1,28 @@
 import React, { useState, useContext } from "react";
 import { MovieContext } from "../../context/Movie.context";
+import PaymentModal from '../PaymentModal/Payment.Component'
 
 const MovieInfo = () => {
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [price, setPrice] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [price, setPrice] = useState(0);
 
   const { movie } = useContext(MovieContext);
 
   const genres = movie.genres?.map(({ name }) => name).join(", ");
 
-  // const rentMovie = () => {
-  //   setIsOpen(true);
-  //   setPrice(149);
-  // };
+  const rentMovie = () => {
+    setIsOpen(true);
+    setPrice(149);
+  };
 
-  // const buyMovie = () => {
-  //   setIsOpen(true);
-  //   setPrice(999);
-  // };
+  const buyMovie = () => {
+    setIsOpen(true);
+    setPrice(999);
+  };
 
   return (
     <>
-      {/* <PaymentModel setIsOpen={setIsOpen} isOpen={isOpen} price={price} />; */}
+      <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} />;
       <div className="flex flex-col gap-8">
         <h1 className="text-white text-5xl font-bold">
           {movie.original_title}
@@ -34,8 +35,11 @@ const MovieInfo = () => {
           </h4>
         </div>
         <div className="flex items-center gap-3 md:px-4 md:w-screen text-xl px-4">
-          <button className="bg-rose-500  py-3 px-12 text-white font-semibold rounded-lg">
-            Book tickets
+          <button onClick={rentMovie} className="bg-rose-500 hover:bg-rose-800  py-3 px-10 text-white font-semibold rounded-lg ml-[-12px]">
+            Rent $149
+          </button>
+          <button onClick={buyMovie} className="bg-rose-500 hover:bg-rose-800 py-3 px-12 text-white font-semibold rounded-lg">
+            Buy $999
           </button>
         </div>
       </div>
