@@ -7,6 +7,7 @@ const MovieHero = () => {
 
   const genres = movie.genres?.map(({ name }) => name).join(", ");
 
+
   // console.log(genres);
   return (
     <>
