@@ -127,18 +127,18 @@ for searching various types of links (top movies, favorite movies etc): [Develop
  - Docker Client -> Client
  - Docker Swarm -> Orchestera (Master | Main Node | Configuration)
 
-``
+```
  > Master Node
  > Child Node
         > POD (Container)
         > Development (Where it keeps close eye on Pod)
-``
+```
 
  * Kubernetes is just an advance extention for Docker. (just as javascript (Docker) and node.js (Kubernetes)).
 
  Example: if we want to run server in docker with 3 containers 
 
-``
+```
  - Docker 
    >> Image
         >> Container 1
@@ -153,9 +153,9 @@ for searching various types of links (top movies, favorite movies etc): [Develop
 
  Master Node 
     Child Node-1          Child Node-2          Child Node-3        Development
-``
+```
 
-    Development is to handle exception cases like server failures (Additonal feature of kubernetes), it monitors, analyze and maintain every child node/POD/Servers/Containers internally.
+Development is to handle exception cases like server failures (Additonal feature of kubernetes), it monitors, analyze and maintain every child node/POD/Servers/Containers internally.
 
  ### NGINX (Light weight Server)
  A powerful, open-source web server, reverse proxy, load balancer, and HTTP cache that is known for its high performance and low resource utilization, making it a popular choice for various web applications and infrastructure needs. 
