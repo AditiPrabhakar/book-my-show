@@ -113,8 +113,8 @@ for searching various types of links (top movies, favorite movies etc): [Develop
  - Child Node (A group of people who will be following the lead's/master's guidance).
 
  #### Docker
- >> Image
- >> Containers
+ - Image
+ - Containers
 
 ```
  Image (Parent)
