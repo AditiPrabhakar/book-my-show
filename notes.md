@@ -108,7 +108,7 @@ for searching various types of links (top movies, favorite movies etc): [Develop
  ### Kubernetes (Orchestra)
  An open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It groups containers into logical units for easy management and discovery, and is used to manage and scale applications running in containers. 
 
- >> Nodes:
+ **Nodes**:
  - Master Node (A person holding the stick in the orchestra / Lead).
  - Child Node (A group of people who will be following the lead's/master's guidance).
 
@@ -116,11 +116,12 @@ for searching various types of links (top movies, favorite movies etc): [Develop
  >> Image
  >> Containers
 
+```
  Image (Parent)
  Container (Child) || server
+```
 
  Client server Architecture
-
 
  **Kubernetes**
  - Docker Deamon -> Server (Intialization)
