@@ -15,7 +15,7 @@ const Cast = (props) => {
           {/* <h3 className={`text-lg font-bold ${props.isDark ? "text-white" : "text-gray-700"}`}>{props.castName}</h3> */}
         </div>
         <h1 className="text-xl text-gray-800">{props.castName}</h1>
-        <h5 className="text-sm text-gray-500">{props.role}</h5>
+        <h5 className="text-sm text-gray-500">as {props.role}</h5>
       </div>
     </div>
   );
