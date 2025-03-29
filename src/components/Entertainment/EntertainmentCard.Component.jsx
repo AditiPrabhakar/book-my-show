@@ -5,7 +5,7 @@ import { NextArrow, PrevArrow } from '../HeroCarousel/Arrows.Component';
 const EntertainmentCard = (props) => {
   return (
     <>
-      <div className="w-full h-full px-2"> {/* Added padding between cards */}
+      <div className="w-full h-30 px-2"> {/* Added padding between cards */}
         <img
           className="w-full h-full rounded-lg object-cover shadow-md" 
           src={props.src} 
